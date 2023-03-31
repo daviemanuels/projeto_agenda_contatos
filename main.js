@@ -17,18 +17,23 @@ function adicionaLinha() {
     const inputNomeAgenda = document.getElementById('nome-agenda');
     const inputTelefoneAgenda = document.getElementById('telefone-agenda');
 
-    contatos.push(inputNomeAgenda.value);
-    telefones.push(inputTelefoneAgenda.value);
+    if (telefones.includes(inputTelefoneAgenda.value)) {
+        alert(`O número de telefone ${inputTelefoneAgenda.value} já pertence a outro contato.`);
+    } else {
+        contatos.push(inputNomeAgenda.value);
+        telefones.push(inputTelefoneAgenda.value);
+        
+        let linha = '<tr>';
+        linha += `<td>${inputNomeAgenda.value}</td>`;
+        linha += `<td>${inputTelefoneAgenda.value}</td>`;
+        linha += `</tr>`;
+        
+        linhas += linha;
     
-    let linha = '<tr>';
-    linha += `<td>${inputNomeAgenda.value}</td>`;
-    linha += `<td>${inputTelefoneAgenda.value}</td>`;
-    linha += `</tr>`;
-    
-    linhas += linha;
+        inputNomeAgenda.value = '';
+        inputTelefoneAgenda.value = '';
+    }
 
-    inputNomeAgenda.value = '';
-    inputTelefoneAgenda.value = '';
 };
 
 function atualizaTabela() {  
