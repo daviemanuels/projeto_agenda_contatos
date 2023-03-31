@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda de Contatos</title>
+    <link rel="stylesheet" href="main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="./images/agenda.png" alt="Agenda">
+            <h1>Agenda de contatos</h1>
+        </header>
+        <form id="form-agenda">
+            <input type="text" name="" id="nome-agenda" placeholder="Contatos da agenda" required />
+            <input type="text" name="" id="telefone-agenda" placeholder="Telefone" required />
+            <button type="submit">Cadastrar</button>
+        </form>
+        <table cellspacing="0">
+            <thead>
+                <tr>
+                    <th>Nome do contato</th>
+                    <th>Telefone do contato</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- <tr>
+                    <td>Teste 1</td>
+                    <td>8399999999</td>
+                </tr> -->
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td>Usuários cadastrados</td>
+                    <td id="total-usuarios-cadastrados">---</td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+    <script src="./main.js"></script>
+</body>
+</html>
